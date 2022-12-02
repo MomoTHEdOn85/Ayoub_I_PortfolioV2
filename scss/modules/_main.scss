@@ -84,3 +84,113 @@ header {
   color: $mainf-color;
 }
 
+main {
+  font-size: 1em;
+  font-weight: 400;
+  font-family: $myFont;
+  color: $mainf-color;
+  text-align: center;
+  padding: 0.5em;
+
+  h3 {
+    width: 12em;
+    border: 3px solid #3fd4a2;
+    border-radius: 50% 50% 50% 50% / 70% 60% 40% 40%;
+    font-size: 2em;
+    font-weight: 600;
+    padding: 2em;
+  }
+
+  h4 {
+    padding: 1em;
+    font-size: 2em;
+  }
+
+  p {
+    line-height: 1.5em;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    padding: 1.8em;
+    font-weight: 600;
+  }
+  li {
+    border: 4px solid #0112ad;
+    border-radius: 50% 50% 50% 50% / 70% 60% 40% 40%;
+    color: #0112ad;
+    background-color: #3fd4a2;
+    border-radius: 20px;
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+
+  video {
+    padding: 1em;
+    padding-top: 1em;
+    width: 95%;
+  }
+}
+#Contact {
+  padding-top: 4em;
+}
+
+//Desktop 
+@media screen and (min-width: 584px) {
+  header {
+    display: grid;
+    grid-column: 2 / span 2;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    //justify-content: center;
+    align-items: center;
+  }
+  
+  .Hero {  
+    object {
+      margin-left: -30em;
+      padding: 1em;
+      margin-top: 4em;
+      width: 20em;
+ 
+    };
+    p {
+      margin-left: -2.5em;
+      text-align: center;
+      font-size: 6em;
+      font-weight: 600;
+      font-family: $myFont;
+      color: $mainf-color;
+      justify-content: center;
+    } 
+  }
+  .hText {
+    padding: 2em 2em 2em 2em;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 500;
+    font-family: $myFont;
+    color: $mainf-color;
+  }
+
+  main {
+    h3 {
+      font-size: 4em;
+      text-align: center;
+      margin: auto;
+    }
+    h4 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 2.3em;
+      padding: 1em 5em 1em 5em;
+    }
+    video {
+      margin-top: 4em;
+      width: 70%;
+    }
+  }
+
+}
+
+ 
+ 
