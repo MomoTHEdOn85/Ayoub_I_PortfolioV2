@@ -13,26 +13,26 @@
 <body>
   <h1 class="hidden">My Portfolio</h1>
 
-  <header>
+  <header id="Home">
     <h2 class="hidden">Main Header</h2>
     <!---Main Navigation-->
     <nav class="Nav" aria-label="Main-Nav">
       <h3 class="hidden">Main Navigation</h3>
       <ul>
         <li class="list">
-          <a href="#" class="">Home</a>
+          <a href="#Home" class="">Home</a>
         </li>
         
         <li class="list">
-          <a href="#" class="">Projects</a>
+          <a href="#Work" class="">Projects</a>
         </li>
         
         <li class="list">
-          <a href="#" class="">Contact</a>
+          <a href="#Contact" class="">Contact</a>
         </li>
         
         <li class="list">
-          <a href="#" class=""><ion-icon name="home-outline"></ion-icon></a>
+          <a href="#Home" class=""><ion-icon name="home-outline"></ion-icon></a>
         </li>
       </ul>
     </nav>
@@ -55,11 +55,93 @@
   </div>
 
   <main>
-    <div class="Work">
-
+    <div id="Work">
+      <h3>Projects</h3>
+      <video src="images/Final-mpFour.mp4" controls></video>
+      
+      <ul class="project">
+        <theworkThumb @loadlbdata="loadLightbox" v-for="hero in heroData" :hero="hero"></theworkThumb>
+      </ul>
     </div>
-    
 
+    <!--Close Lightbox-->
+    <thelightbox @closelightbox="this.showLB=false" v-if="showLB" :item="lbData"></thelightbox>
+
+    <div id="about">
+      <h3>About</h3>
+      <p>Hey ya'all or anyone viewing my webpage. My name is Immama Ayoub, Multimedia Designer and Web Developer currently residing in London, Canada. 
+      I highly value the represent the best quality of work for my clients. As a currenlty student of Interactive Media Development-3d Visualization at Fanshawe College, I have learned to love to 3d design and web development.</p>
+      <p>As you might have already seen from my projects, I've come to specialize in User-Exerience Designing and Development. Feel free to contact me if you would also like to see my expertise in your project.</p>
+    </div>
+
+    <div class="services">
+      <h4>Services</h4>
+      <ul>
+        <li>3d Designing</li>
+        <li>Motion Design</li>
+        <li>Graphic Design</li>
+        <li>Prototyping</li>
+        <li>Web Development</li>
+      </ul>
+    </div>
+
+    <div class="skills">
+      <h4>Skills</h4>
+      <ul>
+        <li>Adobe Suite</li>
+        <li>JavaScript</li>
+        <li>Cinema 4D</li>
+        <li>Blender</li>
+        <li>3ds Max</li>
+        <li>HTML & CSS/SCSS</li>
+        <li>Git</li>
+        <li>PHP</li>
+      </ul>
+    </div>
+
+    <!--How I approach-
+    <div class="aproch">
+      <h3 class="hidden">Approach</h3>
+      <p>Liking my work so far?!</p>
+      <p>You can contact me in the contact section down here, but before you do that, here is how I approach with my clients:</p>
+      <ul>
+        <li></li>
+      </ul>
+    </div>  -->
+
+    <div id="Contact">
+      <h3>Contact</h3>
+      <form action="includes/send.php" method="POST" id="mail-form">
+        <label for="firstname">First Name</label>
+        <input ref="firstname" type="text" id="firstname" name="firstname" required="required"/>
+        <p class="error-first-name"></p>
+  
+        <label for="lastname">Last Name</label>
+        <input ref="lastname" type="text" id="lastname" name="lastname" required/>
+        <p class="error-last-name"></p>
+  
+        <label for="email">Email</label>
+        <input ref="email" type="email" id="email" name="email" required/>
+        <p class="error-email"></p>
+  
+        <label for="message">Your Message</label>
+        <textarea ref="message" name="message" id="message" cols="30" rows="10"></textarea>
+        <p class="error-message"></p>
+  
+        <label for="phone">Your Phone # <i>(optional)</i></label>
+        <input ref="phone" type="tel" value="tel" name="phone">
+              
+        <div class="wrapper">
+          <input @click.prevent="processMail" type="submit" class="submit" value="Go!">
+          <i class="fas fa-paper-plane"></i>
+        </div>                              
+      </form>
+
+      <section id="mailData">
+        <h1 style="color:black;"> </h1>
+      </section>
+      
+    </div>
   </main>
 
   <footer>
@@ -83,7 +165,9 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/main2.js" type="module" defer></script>
   <script src="js/main.js" type="module" defer></script>
+  <script src="js/components/mailer.js" type="module" defer></script>
   
 </body>
 </html>

@@ -1,0 +1,22 @@
+{
+  "Elin": {
+    "name": "Elin",
+    "thumb": "elinThumb.jpg",
+    "desc": "We have been tasked with creating a brand identity and mock-ups to promote a variety of cosmetics. The product line will need to be visualized, branded, and advertised with a marketing approach that is befitting the chosen brand position and aesthetic. For this, we had to create a style guide, banner ads with detailed mockups, and a promo video.",
+    "methods": "Made with Adobe Photoshop, Illustrator, and Aftereffects."
+  },
+  "Bronner's Beer": {
+    "name":"Bronner's Beer",
+    "thumb":"broner_thumb.jpg",
+    "desc": "We were responsible for designing, coding, and semantically tagging a responsive HTML5 website (using Flexbox and or CSS Grid) to market their new brand. The site had to be 5 pages (including a page for contact information / where they could purchase your new product).",
+    "methods":"Designed using Adobe Photoshop, Illustrator, In Design, and AfterEffects. Coded using Html, JavaScript, and CSS."
+
+  },
+  "Favourtite things": {
+    "name":"Favourite things",
+    "thumb":"fav_thumb.jpg",
+    "desc": "Design a mobile-first one-page web application that highlights your favourite things. Use images, video, 3D - anything at all. You must use a JSON object with at least 4 properties - you. MUST have title/heading (text), image(s) and descriptive text. Include a landing/splash page with some controls to showcase each of your favourite things. You should also include some kind of error handling if things go awry. Use an event and Fetch call to retrieve information specific to a favourite thing, and show that information in a lightbox or something similar. Use modern tools and techniques to generate the required assets. Use SASS components for your CSS and JS components where appropriate.",
+    "methods":"Coded using HTML, JavaScript, SCSS, and CSS."
+  }
+
+}
